@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbos Irregulares: Pasado Simple y Participio Pasado</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #5cb85c;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+            color: #5cb85c;
+            margin-top: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        #searchInput {
+            width: 80%;
+            max-width: 400px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verbos Irregulares en Inglés: Pasado Simple y Participio Pasado</h1>
+    <div class="container">
+        <input type="text" id="searchInput" placeholder="Buscar verbo...">
+        <table id="verbTable">
+            <thead>
+                <tr>
+                    <th>Base Form</th>
+                    <th>En Español</th>
+                    <th>Past Simple</th>
+                    <th>Past Participle</th>
+                    <th>Ejemplo (Past Simple)</th>
+                    <th>Ejemplo (Past Participle)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>be</td>
+                    <td>ser/estar</td>
+                    <td>was/were</td>
+                    <td>been</td>
+                    <td>I was there. (Yo estuve allí.)</td>
+                    <td>I have been there. (Yo he estado allí.)</td>
+                </tr>
+                <tr>
+                    <td>become</td>
+                    <td>convertirse en</td>
+                    <td>became</td>
+                    <td>become</td>
+                    <td>He became a doctor. (Él se hizo doctor.)</td>
+                    <td>He has become a doctor. (Él se ha hecho doctor.)</td>
+                </tr>
+                <tr>
+                    <td>begin</td>
+                    <td>empezar</td>
+                    <td>began</td>
+                    <td>begun</td>
+                    <td>The class began at 9. (La clase empezó a las 9.)</td>
+                    <td>The class has begun. (La clase ha empezado.)</td>
+                </tr>
+                <tr>
+                    <td>bleed</td>
+                    <td>sangrar</td>
+                    <td>bled</td>
+                    <td>bled</td>
+                    <td>He bled after the accident. (Él sangró después del accidente.)</td>
+                    <td>He has bled a lot. (Él ha sangrado mucho.)</td>
+                </tr>
+                <tr>
+                    <td>blow</td>
+                    <td>soplar</td>
+                    <td>blew</td>
+                    <td>blown</td>
+                    <td>The wind blew strongly. (El viento sopló fuerte.)</td>
+                    <td>The wind has blown all night. (El viento ha soplado toda la noche.)</td>
+                </tr>
+                <tr>
+                    <td>bite</td>
+                    <td>morder</td>
+                    <td>bit</td>
+                    <td>bitten</td>
+                    <td>The dog bit him. (El perro le mordió.)</td>
+                    <td>He has been bitten by a dog. (Él ha sido mordido por un perro.)</td>
+                </tr>
+                <tr>
+                    <td>break</td>
+                    <td>romper</td>
+                    <td>broke</td>
+                    <td>broken</td>
+                    <td>She broke the vase. (Ella rompió el jarrón.)</td>
+                    <td>The vase has been broken. (El jarrón ha sido roto.)</td>
+                </tr>
+                <tr>
+                    <td>bring</td>
+                    <td>traer</td>
+                    <td>brought</td>
+                    <td>brought</td>
+                    <td>He brought the book. (Él trajo el libro.)</td>
+                    <td>He has brought the book. (Él ha traído el libro.)</td>
+                </tr>
+                <tr>
+                    <td>build</td>
+                    <td>construir</td>
+                    <td>built</td>
+                    <td>built</td>
+                    <td>They built a house. (Ellos construyeron una casa.)</td>
+                    <td>They have built a house. (Ellos han construido una casa.)</td>
+                </tr>
+                <tr>
+                    <td>burn</td>
+                    <td>quemar</td>
+                    <td>burnt</td>
+                    <td>burnt</td>
+                    <td>I burnt the toast. (Quemé la tostada.)</td>
+                    <td>I have burnt the toast. (He quemado la tostada.)</td>
+                </tr>
+                <tr>
+                    <td>buy</td>
+                    <td>comprar</td>
+                    <td>bought</td>
+                    <td>bought</td>
+                    <td>I bought a car. (Compré un coche.)</td>
+                    <td>I have bought a car. (He comprado un coche.)</td>
+                </tr>
+                <tr>
+                    <td>can</td>
+                    <td>poder</td>
+                    <td>could</td>
+                    <td>could</td>
+                    <td>I could swim. (Yo podía nadar.)</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>catch</td>
+                    <td>atrapar</td>
+                    <td>caught</td>
+                    <td>caught</td>
+                    <td>I caught the ball. (Atrapé la pelota.)</td>
+                    <td>I have caught the ball. (He atrapado la pelota.)</td>
+                </tr>
+                <tr>
+                    <td>choose</td>
+                    <td>elegir</td>
+                    <td>chose</td>
+                    <td>chosen</td>
+                    <td>I chose the red one. (Elegí el rojo.)</td>
+                    <td>I have chosen the red one. (He elegido el rojo.)</td>
+                </tr>
+                <tr>
+                    <td>come</td>
+                    <td>venir</td>
+                    <td>came</td>
+                    <td>come</td>
+                    <td>He came to the party. (Él vino a la fiesta.)</td>
+                    <td>He has come to the party. (Él ha venido a la fiesta.)</td>
+                </tr>
+                <tr>
+                    <td>cost</td>
+                    <td>costar</td>
+                    <td>cost</td>
+                    <td>cost</td>
+                    <td>It cost a lot. (Costó mucho.)</td>
+                    <td>It has cost a lot. (Ha costado mucho.)</td>
+                </tr>
+                <tr>
+                    <td>cut</td>
+                    <td>cortar</td>
+                    <td>cut</td>
+                    <td>cut</td>
+                    <td>I cut the paper. (Corté el papel.)</td>
+                    <td>I have cut the paper. (He cortado el papel.)</td>
+                </tr>
+                <tr>
+                    <td>dig</td>
+                    <td>cavar</td>
+                    <td>dug</td>
+                    <td>dug</td>
+                    <td>I dug a hole. (Cavé un agujero.)</td>
+                    <td>I have dug a hole. (He cavado un agujero.)</td>
+                </tr>
+                <tr>
+                    <td>do</td>
+                    <td>hacer</td>
+                    <td>did</td>
+                    <td>done</td>
+                    <td>I did my homework. (Hice mi tarea.)</td>
+                    <td>I have done my homework. (He hecho mi tarea.)</td>
+                </tr>
+                <tr>
+                    <td>draw</td>
+                    <td>dibujar</td>
+                    <td>drew</td>
+                    <td>drawn</td>
+                    <td>I drew a picture. (Dibujé una imagen.)</td>
+                    <td>I have drawn a picture. (He dibujado una imagen.)</td>
+                </tr>
+                <tr>
+                    <td>dream</td>
+                    <td>soñar</td>
+                    <td>dreamt/dreamed</td>
+                    <td>dreamt/dreamed</td>
+                    <td>I dreamt of you. (Soñé contigo.)</td>
+                    <td>I have dreamt of you. (He soñado contigo.)</td>
+                </tr>
+                <tr>
+                    <td>drink</td>
+                    <td>beber</td>
+                    <td>drank</td>
+                    <td>drunk</td>
+                    <td>I drank water. (Bebí agua.)</td>
+                    <td>I have drunk water. (He bebido agua.)</td>
+                </tr>
+                <tr>
+                    <td>drive</td>
+                    <td>conducir</td>
+                    <td>drove</td>
+                    <td>driven</td>
+                    <td>I drove to work. (Conduje al trabajo.)</td>
+                    <td>I have driven to work. (He conducido al trabajo.)</td>
+                </tr>
+                <tr>
+                    <td>eat</td>
+                    <td>comer</td>
+                    <td>ate</td>
+                    <td>eaten</td>
+                    <td>I ate pizza. (Comí pizza.)</td>
+                    <td>I have eaten pizza. (He comido pizza.)</td>
+                </tr>
+                <tr>
+                    <td>fall</td>
+                    <td>caer</td>
+                    <td>fell</td>
+                    <td>fallen</td>
+                    <td>I fell down. (Me caí.)</td>
+                    <td>I have fallen down. (Me he caído.)</td>
+                </tr>
+                <tr>
+                    <td>feed</td>
+                    <td>alimentar</td>
+                    <td>fed</td>
+                    <td>fed</td>
+                    <td>I fed the dog. (Alimenté al perro.)</td>
+                    <td>I have fed the dog. (He alimentado al perro.)</td>
+                </tr>
+                <tr>
+                    <td>feel</td>
+                    <td>sentir</td>
+                    <td>felt</td>
+                    <td>felt</td>
+                    <td>I felt happy. (Me sentí feliz.)</td>
+                    <td>I have felt happy. (Me he sentido feliz.)</td>
+                </tr>
+                <tr>
+                    <td>fight</td>
+                    <td>luchar</td>
+                    <td>fought</td>
+                    <td>fought</td>
+                    <td>I fought bravely. (Luché valientemente.)</td>
+                    <td>I have fought bravely. (He luchado valientemente.)</td>
+                </tr>
+                <tr>
+                    <td>find</td>
+                    <td>encontrar</td>
+                    <td>found</td>
+                    <td>found</td>
+                    <td>I found my keys. (Encontré mis llaves.)</td>
+                    <td>I have found my keys. (He encontrado mis llaves.)</td>
+                </tr>
+                <tr>
+                    <td>fly</td>
+                    <td>volar</td>
+                    <td>flew</td>
+                    <td>flown</td>
+                    <td>I flew to Spain. (Volé a España.)</td>
+                    <td>I have flown to Spain. (He volado a España.)</td>
+                </tr>
+                 <tr>
+                    <td>forbid</td>
+                    <td>prohibir</td>
+                    <td>forbade</td>
+                    <td>forbidden</td>
+                    <td>My parents forbade me to go out. (Mis padres me prohibieron salir.)</td>
+                    <td>I have been forbidden to go out. (Me han prohibido salir.)</td>
+                </tr>
+                <tr>
+                    <td>forget</td>
+                    <td>olvidar</td>
+                    <td>forgot</td>
+                    <td>forgotten</td>
+                    <td>I forgot my wallet. (Olvidé mi billetera.)</td>
+                    <td>I have forgotten my wallet. (He olvidado mi billetera.)</td>
+                </tr>
+                <tr>
+                    <td>forgive</td>
+                    <td>perdonar</td>
+                    <td>forgave</td>
+                    <td>forgiven</td>
+                    <td>I forgave him. (Lo perdoné.)</td>
+                    <td>I have forgiven him. (Lo he perdonado.)</td>
+                </tr>
+                <tr>
+                    <td>freeze</td>
+                    <td>congelar</td>
+                    <td>froze</td>
+                    <td>frozen</td>
+                    <td>The lake froze. (El lago se congeló.)</td>
+                    <td>The lake has frozen. (El lago se ha congelado.)</td>
+                </tr>
+                <tr>
+                    <td>get</td>
+                    <td>obtener</td>
+                    <td>got</td>
+                    <td>got</td>
+                    <td>I got a gift. (Recibí un regalo.)</td>
+                    <td>I have got a gift. (He recibido un regalo.)</td>
+                </tr>
+                <tr>
+                    <td>give</td>
+                    <td>dar</td>
+                    <td>gave</td>
+                    <td>given</td>
+                    <td>I gave him a gift. (Le di un regalo.)</td>
+                    <td>I have given him a gift. (Le he dado un regalo.)</td>
+                </tr>
+                <tr>
+                    <td>go</td>
+                    <td>ir</td>
+                    <td>went</td>
+                    <td>been/gone</td>
+                    <td>I went to the store. (Fui a la tienda.)</td>
+                    <td>I have gone to the store. (He ido a la tienda.)</td>
+                </tr>
+                <tr>
+                    <td>grow</td>
+                    <td>crecer</td>
+                    <td>grew</td>
+                    <td>grown</td>
+                    <td>The plant grew fast. (La planta creció rápido.)</td>
+                    <td>The plant has grown fast. (La planta ha crecido rápido.)</td>
+                </tr>
+                <tr>
+                    <td>hang</td>
+                    <td>colgar</td>
+                    <td>hung</td>
+                    <td>hung</td>
+                    <td>I hung the picture. (Colgué la foto.)</td>
+                    <td>I have hung the picture. (He colgado la foto.)</td>
+                </tr>
+                <tr>
+                    <td>have</td>
+                    <td>tener</td>
+                    <td>had</td>
+                    <td>had</td>
+                    <td>I had a car. (Yo tenía un coche.)</td>
+                    <td>I have had a car. (Yo he tenido un coche.)</td>
+                </tr>
+                <tr>
+                    <td>hear</td>
+                    <td>oír</td>
+                    <td>heard</td>
+                    <td>heard</td>
+                    <td>I heard a noise. (Oí un ruido.)</td>
+                    <td>I have heard a noise. (He oído un ruido.)</td>
+                </tr>
+                <tr>
+                    <td>hide</td>
+                    <td>esconder</td>
+                    <td>hid</td>
+                    <td>hidden</td>
+                    <td>I hid the toy. (Escondí el juguete.)</td>
+                    <td>I have hidden the toy. (He escondido el juguete.)</td>
+                </tr>
+                <tr>
+                    <td>hit</td>
+                    <td>golpear</td>
+                    <td>hit</td>
+                    <td>hit</td>
+                    <td>I hit the ball. (Golpeé la pelota.)</td>
+                    <td>I have hit the ball. (He golpeado la pelota.)</td>
+                </tr>
+                <tr>
+                    <td>hold</td>
+                    <td>sostener</td>
+                    <td>held</td>
+                    <td>held</td>
+                    <td>I held the baby. (Sostuve al bebé.)</td>
+                    <td>I have held the baby. (He sostenido al bebé.)</td>
+                </tr>
+                <tr>
+                    <td>hurt</td>
+                    <td>herir</td>
+                    <td>hurt</td>
+                    <td>hurt</td>
+                    <td>I hurt my leg. (Me lastimé la pierna.)</td>
+                    <td>I have hurt my leg. (Me he lastimado la pierna.)</td>
+                </tr>
+                <tr>
+                    <td>keep</td>
+                    <td>mantener</td>
+                    <td>kept</td>
+                    <td>kept</td>
+                    <td>I kept the secret. (Guardé el secreto.)</td>
+                    <td>I have kept the secret. (He guardado el secreto.)</td>
+                </tr>
+                 <tr>
+                    <td>know</td>
+                    <td>saber/conocer</td>
+                    <td>knew</td>
+                    <td>known</td>
+                    <td>I knew the answer. (Sabía la respuesta.)</td>
+                    <td>I have known the answer. (He sabido la respuesta.)</td>
+                </tr>
+                <tr>
+                    <td>learn</td>
+                    <td>aprender</td>
+                    <td>learnt/learned</td>
+                    <td>learnt/learned</td>
+                    <td>I learnt English. (Aprendí inglés.)</td>
+                    <td>I have learnt English. (He aprendido inglés.)</td>
+                </tr>
+                <tr>
+                    <td>leave</td>
+                    <td>dejar/salir</td>
+                    <td>left</td>
+                    <td>left</td>
+                    <td>I left the house. (Salí de la casa.)</td>
+                    <td>I have left the house. (He salido de la casa.)</td>
+                </tr>
+                <tr>
+                    <td>lend</td>
+                    <td>prestar</td>
+                    <td>lent</td>
+                    <td>lent</td>
+                    <td>I lent him money. (Le presté dinero.)</td>
+                    <td>I have lent him money. (Le he prestado dinero.)</td>
+                </tr>
+                <tr>
+                    <td>let</td>
+                    <td>permitir</td>
+                    <td>let</td>
+                    <td>let</td>
+                    <td>I let him go. (Le dejé ir.)</td>
+                    <td>I have let him go. (Le he dejado ir.)</td>
+                </tr>
+                <tr>
+                    <td>lie</td>
+                    <td>mentir/acostarse</td>
+                    <td>lay</td>
+                    <td>lain</td>
+                    <td>I lay down. (Me acosté.)</td>
+                    <td>I have lain down. (Me he acostado.)</td>
+                </tr>
+                <tr>
+                    <td>light</td>
+                    <td>encender</td>
+                    <td>lit</td>
+                    <td>lit</td>
+                    <td>I lit the candle. (Encendí la vela.)</td>
+                    <td>I have lit the candle. (He encendido la vela.)</td>
+                </tr>
+                <tr>
+                    <td>lose</td>
+                    <td>perder</td>
+                    <td>lost</td>
+                    <td>lost</td>
+                    <td>I lost my keys. (Perdí mis llaves.)</td>
+                    <td>I have lost my keys. (He perdido mis llaves.)</td>
+                </tr>
+                <tr>
+                    <td>make</td>
+                    <td>hacer</td>
+                    <td>made</td>
+                    <td>made</td>
+                    <td>I made a cake. (Hice un pastel.)</td>
+                    <td>I have made a cake. (He hecho un pastel.)</td>
+                </tr>
+                <tr>
+                    <td>mean</td>
+                    <td>significar</td>
+                    <td>meant</td>
+                    <td>meant</td>
+                    <td>I meant well. (Lo hice con buena intención.)</td>
+                    <td>I have meant well. (Lo he hecho con buena intención.)</td>
+                </tr>
+                <tr>
+                    <td>meet</td>
+                    <td>conocer/encontrar</td>
+                    <td>met</td>
+                    <td>met</td>
+                    <td>I met my friend. (Conocí a mi amigo.)</td>
+                    <td>I have met my friend. (He conocido a mi amigo.)</td>
+                </tr>
+                <tr>
+                    <td>pay</td>
+                    <td>pagar</td>
+                    <td>paid</td>
+                    <td>paid</td>
+                    <td>I paid the bill. (Pagué la cuenta.)</td>
+                    <td>I have paid the bill. (He pagado la cuenta.)</td>
+                </tr>
+                <tr>
+                    <td>put</td>
+                    <td>poner</td>
+                    <td>put</td>
+                    <td>put</td>
+                    <td>I put it there. (Lo puse allí.)</td>
+                    <td>I have put it there. (Lo he puesto allí.)</td>
+                </tr>
+                <tr>
+                    <td>read</td>
+                    <td>leer</td>
+                    <td>read</td>
+                    <td>read</td>
+                    <td>I read a book. (Leí un libro.)</td>
+                    <td>I have read a book. (He leído un libro.)</td>
+                </tr>
+                <tr>
+                    <td>ride</td>
+                    <td>montar</td>
+                    <td>rode</td>
+                    <td>ridden</td>
+                    <td>I rode a bike. (Monté en bicicleta.)</td>
+                    <td>I have ridden a bike. (He montado en bicicleta.)</td>
+                </tr>
+                <tr>
+                    <td>ring</td>
+                    <td>llamar/sonar</td>
+                    <td>rang</td>
+                    <td>rung</td>
+                    <td>The bell rang. (La campana sonó.)</td>
+                    <td>The bell has rung. (La campana ha sonado.)</td>
+                </tr>
+                <tr>
+                    <td>rise</td>
+                    <td>levantar/elevar</td>
+                    <td>rose</td>
+                    <td>risen</td>
+                    <td>The sun rose. (El sol salió.)</td>
+                    <td>The sun has risen. (El sol ha salido.)</td>
+                </tr>
+                <tr>
+                    <td>run</td>
+                    <td>correr</td>
+                    <td>ran</td>
+                    <td>run</td>
+                    <td>I ran fast. (Corrí rápido.)</td>
+                    <td>I have run fast. (He corrido rápido.)</td>
+                </tr>
+                <tr>
+                    <td>say</td>
+                    <td>decir</td>
+                    <td>said</td>
+                    <td>said</td>
+                    <td>I said hello. (Dije hola.)</td>
+                    <td>I have said hello. (He dicho hola.)</td>
+                </tr>
+                <tr>
+                    <td>see</td>
+                    <td>ver</td>
+                    <td>saw</td>
+                    <td>seen</td>
+                    <td>I saw a bird. (Vi un pájaro.)</td>
+                    <td>I have seen a bird. (He visto un pájaro.)</td>
+                </tr>
+                <tr>
+                    <td>sell</td>
+                    <td>vender</td>
+                    <td>sold</td>
+                    <td>sold</td>
+                    <td>I sold my car. (Vendí mi coche.)</td>
+                    <td>I have sold my car. (He vendido mi coche.)</td>
+                </tr>
+                <tr>
+                    <td>send</td>
+                    <td>enviar</td>
+                    <td>sent</td>
+                    <td>sent</td>
+                    <td>I sent a letter. (Envié una carta.)</td>
+                    <td>I have sent a letter. (He enviado una carta.)</td>
+                </tr>
+                <tr>
+                    <td>set</td>
+                    <td>establecer/poner</td>
+                    <td>set</td>
+                    <td>set</td>
+                    <td>I set the table. (Puse la mesa.)</td>
+                    <td>I have set the table. (He puesto la mesa.)</td>
+                </tr>
+                <tr>
+                    <td>sew</td>
+                    <td>coser</td>
+                    <td>sewed</td>
+                    <td>sewn</td>
+                    <td>I sewed a dress. (Cosí un vestido.)</td>
+                    <td>I have sewn a dress. (He cosido un vestido.)</td>
+                </tr>
+                <tr>
+                    <td>shake</td>
+                    <td>sacudir</td>
+                    <td>shook</td>
+                    <td>shaken</td>
+                    <td>I shook the bottle. (Agité la botella.)</td>
+                    <td>I have shaken the bottle. (He agitado la botella.)</td>
+                </tr>
+                <tr>
+                    <td>shine</td>
+                    <td>brillar</td>
+                    <td>shone</td>
+                    <td>shone</td>
+                    <td>The sun shone brightly. (El sol brilló intensamente.)</td>
+                    <td>The sun has shone brightly. (El sol ha brillado intensamente.)</td>
+                </tr>
+                <tr>
+                    <td>show</td>
+                    <td>mostrar</td>
+                    <td>showed</td>
+                    <td>shown</td>
+                    <td>I showed my ID. (Mostré mi identificación.)</td>
+                    <td>I have shown my ID. (He mostrado mi identificación.)</td>
+                </tr>
+                <tr>
+                    <td>sing</td>
+                    <td>cantar</td>
+                    <td>sang</td>
+                    <td>sung</td>
+                    <td>I sang a song. (Canté una canción.)</td>
+                    <td>I have sung a song. (He cantado una canción.)</td>
+                </tr>
+                <tr>
+                    <td>sit</td>
+                    <td>sentar</td>
+                    <td>sat</td>
+                    <td>sat</td>
+                    <td>I sat down. (Me senté.)</td>
+                    <td>I have sat down. (Me he sentado.)</td>
+                </tr>
+                <tr>
+                    <td>sleep</td>
+                    <td>dormir</td>
+                    <td>slept</td>
+                    <td>slept</td>
+                    <td>I slept well. (Dormí bien.)</td>
+                    <td>I have slept well. (He dormido bien.)</td>
+                </tr>
+                <tr>
+                    <td>smell</td>
+                    <td>oler</td>
+                    <td>smelt/smelled</td>
+                    <td>smelt/smelled</td>
+                    <td>It smelt good. (Olía bien.)</td>
+                    <td>It has smelt good. (Ha olido bien.)</td>
+                </tr>
+                <tr>
+                    <td>speak</td>
+                    <td>hablar</td>
+                    <td>spoke</td>
+                    <td>spoken</td>
+                    <td>I spoke English. (Hablé inglés.)</td>
+                    <td>I have spoken English. (He hablado inglés.)</td>
+                </tr>
+                <tr>
+                    <td>spell</td>
+                    <td>deletrear</td>
+                    <td>spelt</td>
+                    <td>spelt</td>
+                    <td>I spelt the word. (Deletreé la palabra.)</td>
+                    <td>I have spelt the word. (He deletreado la palabra.)</td>
+                </tr>
+                <tr>
+                    <td>spend</td>
+                    <td>gastar/pasar</td>
+                    <td>spent</td>
+                    <td>spent</td>
+                    <td>I spent money. (Gasté dinero.)</td>
+                    <td>I have spent money. (He gastado dinero.)</td>
+                </tr>
+                <tr>
+                    <td>stand</td>
+                    <td>estar de pie</td>
+                    <td>stood</td>
+                    <td>stood</td>
+                    <td>I stood up. (Me levanté.)</td>
+                    <td>I have stood up. (Me he levantado.)</td>
+                </tr>
+                <tr>
+                    <td>steal</td>
+                    <td>robar</td>
+                    <td>stole</td>
+                    <td>stolen</td>
+                    <td>I stole the money. (Robé el dinero.)</td>
+                    <td>I have stolen the money. (He robado el dinero.)</td>
+                </tr>
+                <tr>
+                    <td>strike</td>
+                    <td>golpear</td>
+                    <td>struck</td>
+                    <td>struck</td>
+                    <td>I struck the table. (Golpeé la mesa.)</td>
+                    <td>I have struck the table. (He golpeado la mesa.)</td>
+                </tr>
+                <tr>
+                    <td>swim</td>
+                    <td>nadar</td>
+                    <td>swam</td>
+                    <td>swum</td>
+                    <td>I swam in the sea. (Nade en el mar.)</td>
+                    <td>I have swum in the sea. (He nadado en el mar.)</td>
+                </tr>
+                <tr>
+                    <td>take</td>
+                    <td>tomar</td>
+                    <td>took</td>
+                    <td>taken</td>
+                    <td>I took the book. (Tomé el libro.)</td>
+                    <td>I have taken the book. (He tomado el libro.)</td>
+                </tr>
+                <tr>
+                    <td>teach</td>
+                    <td>enseñar</td>
+                    <td>taught</td>
+                    <td>taught</td>
+                    <td>I taught English. (Enseñé inglés.)</td>
+                    <td>I have taught English. (He enseñado inglés.)</td>
+                </tr>
+                <tr>
+                    <td>tell</td>
+                    <td>decir/contar</td>
+                    <td>told</td>
+                    <td>told</td>
+                    <td>I told a story. (Conté una historia.)</td>
+                    <td>I have told a story. (He contado una historia.)</td>
+                </tr>
+                <tr>
+                    <td>think</td>
+                    <td>pensar</td>
+                    <td>thought</td>
+                    <td>thought</td>
+                    <td>I thought about it. (Pensé en ello.)</td>
+                    <td>I have thought about it. (He pensado en ello.)</td>
+                </tr>
+                <tr>
+                    <td>throw</td>
+                    <td>lanzar</td>
+                    <td>threw</td>
+                    <td>thrown</td>
+                    <td>I threw the ball. (Lancé la pelota.)</td>
+                    <td>I have thrown the ball. (He lanzado la pelota.)</td>
+                </tr>
+                <tr>
+                    <td>understand</td>
+                    <td>entender</td>
+                    <td>understood</td>
+                    <td>understood</td>
+                    <td>I understood the lesson. (Entendí la lección.)</td>
+                    <td>I have understood the lesson. (He entendido la lección.)</td>
+                </tr>
+                 <tr>
+                    <td>wake up</td>
+                    <td>despertarse</td>
+                    <td>woke up</td>
+                    <td>woken up</td>
+                    <td>I woke up early. (Me desperté temprano.)</td>
+                    <td>I have woken up early. (Me he despertado temprano.)</td>
+                </tr>
+                <tr>
+                    <td>win</td>
+                    <td>ganar</td>
+                    <td>won</td>
+                    <td>won</td>
+                    <td>I won the game. (Gané el juego.)</td>
+                    <td>I have won the game. (He ganado el juego.)</td>
+                </tr>
+                 <tr>
+                    <td>wear</td>
+                    <td>vestir/llevar</td>
+                    <td>wore</td>
+                    <td>worn</td>
+                    <td>I wore a coat. (Llevé un abrigo.)</td>
+                    <td>I have worn a coat. (He llevado un abrigo.)</td>
+                </tr>
+                <tr>
+                    <td>write</td>
+                    <td>escribir</td>
+                    <td>wrote</td>
+                    <td>written</td>
+                    <td>I wrote a letter. (Escribí una carta.)</td>
+                    <td>I have written a letter. (He escrito una carta.)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            let input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("verbTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                let display = false;
+                for(let j = 0; j < 4; j++){
+                    td = tr[i].getElementsByTagName("td")[j];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            display = true;
+                            break;
+                        }
+                    }
+                }
+                if (display) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
